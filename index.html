@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생명을 살리는 5분</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    line-height:1.6;
+    background:#f5f7fa;
+}
+
+header{
+    background:#e63946;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin:20px 0;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#e63946;
+}
+
+.quiz{
+    text-align:center;
+}
+
+button{
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.trueBtn{
+    background:#2a9d8f;
+    color:white;
+}
+
+.falseBtn{
+    background:#e76f51;
+    color:white;
+}
+
+#result{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🚑 생명을 살리는 5분</h1>
+<p>응급상황에서 당신의 선택이 생명을 구할 수 있습니다.</p>
+</header>
+
+<section>
+
+<div class="card">
+<h2>응급처치란?</h2>
+<p>
+응급처치는 갑작스러운 사고나 질병 발생 시 전문 의료진이 도착하기 전까지 시행하는 초기 처치이다.
+올바른 응급처치는 생명을 구하고 후유증을 줄일 수 있다.
+</p>
+</div>
+
+<div class="card">
+<h2>❤️ CPR</h2>
+<p>
+1. 반응 확인<br>
+2. 119 신고<br>
+3. 가슴압박 실시<br>
+4. AED 사용
+</p>
+</div>
+
+<div class="card">
+<h2>🫁 기도폐쇄</h2>
+<p>
+기도가 막히면 기침을 유도하고,
+필요 시 하임리히법을 시행한다.
+</p>
+</div>
+
+<div class="card">
+<h2>🔥 화상</h2>
+<p>
+화상 부위를 흐르는 물로 15~20분 식힌다.
+얼음이나 치약은 사용하지 않는다.
+</p>
+</div>
+
+<div class="card">
+<h2>🩸 출혈</h2>
+<p>
+깨끗한 거즈로 압박하고
+가능하면 상처 부위를 심장보다 높게 유지한다.
+</p>
+</div>
+
+<div class="card quiz">
+
+<h2>OX 퀴즈</h2>
+
+<p>화상 시 얼음을 직접 대는 것이 좋다.</p>
+
+<button class="trueBtn" onclick="check(false)">
+O
+</button>
+
+<button class="falseBtn" onclick="check(true)">
+X
+</button>
+
+<div id="result"></div>
+
+</div>
+
+</section>
+
+<script>
+
+function check(answer){
+
+const result=document.getElementById("result");
+
+if(answer){
+result.innerHTML="정답입니다! 🎉";
+}
+else{
+result.innerHTML="오답입니다 😢";
+}
+
+}
+
+</script>
+
+</body>
+</html>
